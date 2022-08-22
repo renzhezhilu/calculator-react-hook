@@ -1,0 +1,125 @@
+body,
+html {
+}
+
+#root {
+    font-family: "SF Pro SC", "SF Pro Display", "SF Pro Icons", "PingFang SC", "Helvetica Neue", "Helvetica", "Arial",
+        sans-serif;
+    // font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    font-size: 14px;
+    line-height: 18px;
+    input,
+    textarea {
+        font-family: Helvetica, Arial, sans-serif;
+    }
+}
+.App {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+}
+
+.backgroundPic {
+    position: absolute;
+    z-index: 1;
+    width: 120vw;
+    height: 120vh;
+    left: -10vw;
+    top: -10vh;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(105px) brightness(1) saturate(30%);
+    }
+}
+.Calculator {
+    border: 1px solid var(--border);
+    width: 230px;
+    height: 320px;
+    border-radius: 10px;
+    box-shadow: var(--shadow2);
+    font-weight: 400;
+    // background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    background-color: var(--black_opt);
+    backdrop-filter: saturate(180%) blur(8px);
+}
+.Screen {
+    height: 28%;
+    padding: 0 7%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+
+    color: var(--white);
+    font-weight: 100;
+    .history {
+        font-size: 14px;
+        opacity: 0.5;
+        height: 30%;
+        flex-shrink: 0;
+        padding-top: 2%;
+        // background-color: salmon;
+    }
+    .result {
+        font-size: 50px;
+        height: 100%;
+    }
+}
+.Command {
+    user-select: none;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .button {
+        width: 25%;
+        font-size: 22px;
+        cursor: pointer;
+        border-right: 1px solid var(--border);
+        border-top: 1px solid var(--border);
+        background-color: var(--white2);
+        &.notBorder {
+            border-right: none;
+        }
+        &.em {
+            background-color: var(--color);
+            color: var(--white);
+        }
+        &.minSize {
+            font-size: 18px;
+        }
+        &.bigSize {
+            font-size: 32px;
+            font-weight: 200;
+            span{
+            transform: translateY(-10%);
+
+            }
+        }
+        &.bigerBut {
+            width: 50%;
+            justify-content: left;
+            span {
+                width: 50%;
+            }
+        }
+        &:hover {
+            filter: brightness(95%);
+        }
+        &:active {
+            filter: brightness(90%);
+            span {
+                transform: translateY(1px);
+            }
+        }
+    }
+}

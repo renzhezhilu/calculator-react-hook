@@ -1,0 +1,90 @@
+body {
+    // font-family: 'Inter', Avenir, Helvetica, Arial, sans-serif;
+    // font-weight: 300;
+}
+
+*,
+*::before,
+*::after {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    transition: fill 0.3s, background-color 0.3s, opacity 0.3s, color 0.1s, border-color 0.3s ;
+    // border-radius: 4px;
+}
+
+*:focus {
+    outline: none;
+    // outline: 3px solid var(--color_opt);
+    box-shadow: 0px 0px 0 2px var(--color), 0px 0px 0 5px var(--color);
+
+    // box-shadow: 10.876px 5.071px 18px 0 var(--color_opt), -5.905px -6.792px 8px 0 var(--bg);
+}
+a {
+    color: inherit;
+    &:hover {
+        color: var(--color);
+    }
+}
+
+//文本选中颜色
+::selection {
+    background: var(--color);
+    color: var(--bg);
+}
+
+::-moz-selection {
+    background: var(--color);
+    color: var(--bg);
+}
+
+::-webkit-selection {
+    background: var(--color);
+    color: var(--bg);
+}
+
+// 不现实默认控件
+input::-webkit-textfield-decoration-container {
+    background-color: transparent;
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+//
+input::-webkit-input-placeholder {
+    /* placeholder颜色 */
+    // color: var(--);
+    /* placeholder字体大小 */
+    font-size: 12px;
+    // font-weight: 100;
+}
+
+
+
+// 
+/* 滚动条 */
+.tableContent::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*滚动条里面轨道*/
+.tableContent::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+}
+
+/*滚动条整体样式*/
+.tableContent::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 100px;
+}
