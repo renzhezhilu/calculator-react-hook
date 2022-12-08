@@ -21,20 +21,23 @@ html {
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
+
 }
 
 .backgroundPic {
     position: absolute;
     z-index: 1;
-    width: 120vw;
-    height: 120vh;
-    left: -10vw;
-    top: -10vh;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    pointer-events: none;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: blur(105px) brightness(1) saturate(30%);
+        filter: blur(110px) brightness(1) saturate(30%);
+
     }
 }
 .Calculator {
@@ -52,6 +55,7 @@ html {
     z-index: 2;
     background-color: var(--black_opt);
     backdrop-filter: saturate(180%) blur(8px);
+    // filter:grayscale(1);
 }
 .Screen {
     height: 28%;

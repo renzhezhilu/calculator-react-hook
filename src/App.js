@@ -6,7 +6,7 @@ function App() {
     <div className="App flex_center2" >
       <Calculator />
       <div className="backgroundPic">
-        <img src="https://placekitten.com/96/139" alt="" />
+        <img src="https://source.unsplash.com/random/300x300/?city" alt="" />
       </div>
     </div>
   );
